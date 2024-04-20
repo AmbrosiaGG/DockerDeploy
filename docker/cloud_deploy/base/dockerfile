@@ -26,4 +26,4 @@ RUN echo $(ifconfig)
 RUN echo $(whoami)
 RUN echo 'This is a docker container running debian slim docker, HOSTED BY AmbrosiaCloud Deploy' > ~/container.txt
 
-CMD ["sleep", "infinite"]
+CMD ["sleep", "infinity"]

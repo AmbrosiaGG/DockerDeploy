@@ -12,7 +12,8 @@ app.use(bodyParser.json());
 const docker = new Docker(); // Default docker sock
 
 console.log('Re-Building base image :D please wait')
-require("child_process").execSync('cd ./docker/cloud_deploy/base && docker build -t cloudbase .')
+require("child_process").execSync('cd ./docker/cloud_deploy/base && docker build -t cloudbase .', { stdio: "inherit"
+})
 
 docker.createContainer({
     Image: 'cloudbase',
